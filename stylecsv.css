@@ -1,0 +1,391 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: .5s ease-in-out;
+}
+ul {
+    list-style: none;
+    }
+    a {
+    text-decoration: none;
+    outline: none;
+    }
+    img {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    letter-spacing: 1px;
+    }
+    body {
+        margin: 0px auto;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        line-height: 1;
+        color: black;
+        background: white;
+    }
+    header:after, .container:after, footer:after, .widget-posts-list li:after, #subscribe:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+/* стилевой класс, который управляет шириной контейнера сетки*/
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+header {
+    margin: 0 auto;
+    width: 100%;
+    background: white;
+    padding: 0 15px;
+    position: relative;
+    margin-bottom: 0px;
+}
+.logo {
+    float: left;
+    display: block;
+    margin: 0px;
+    padding: 0;
+}
+.logo_mobil {
+    display: none;
+}
+/* меню */
+#menu {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+}
+.top_menu {
+    display: flex;
+    background: #139049;
+}
+#menu li {
+    margin: 0 11px;
+    display: inline-block;
+    margin-top: 15px;
+}
+#menu li:last-child {
+    padding-right: 20px;
+
+}
+#menu a {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-weight: 600;
+    font-size: 0,13vh;
+}
+#menu a:hover {
+    color:#C62C3A;
+}
+.korzina {
+    display: flex;
+    flex-wrap: nowrap;
+    background: #139049;
+}
+.korzina-image {
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 75px;
+    padding: 0;
+   
+}
+.korzina li {
+    margin-right: 11px;
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+}
+.korzina a {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-weight: 600;
+    font-size: 13px; 
+    
+}
+.kozina_mobile {
+    display: none;
+    position: absolute;
+    float: right;
+}
+.korzina a:hover {
+    color:#C62C3A;
+}
+/* кнопка переключения меню, появляющаяся при ширине 768px */
+.nav-toggle {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-left: 20px;
+    background: #139049;
+    cursor: pointer;
+    margin-top: 20px;
+    color: white;
+}
+.nav-toggle span {
+    display: block;
+    position: absolute;
+    top: 19px;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background: white;
+}
+
+.nav-toggle span:before, .nav-toggle span:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+.nav-toggle span:before {
+    top: -10px;
+}
+
+.nav-toggle span:after {
+    bottom: -10px;
+}
+/* класс, который будет добавлен в верхнему меню при нажатии на кнопку и покажет скрытое меню*/
+#menu.active {
+    
+    display: block;
+}
+.akcy {
+    display: block;
+    float: left;
+}
+.akcu_kontakt {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.kontakt_info {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 15px;
+    font-style: normal;
+    display: block;
+    height: auto;
+    margin-top: 20px;
+}
+.kontakt_info span {
+    margin-left: 20px;
+}
+.kontat_info_top {
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+.kontat_info_top li {
+    display: inline-block;
+    margin-top: 23px;
+    line-height: 10px;
+}
+.kontat_info_top a {
+    color: #139049;
+    margin: 2px 20px;
+    line-height: 10px;
+}
+.kontat_info_top li:first-child {
+    margin-right: 50px;
+}
+.post_social {
+    display: inline;
+    float: right;
+}
+.baner_main {
+    margin: 0 auto;
+}
+.col-1 {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 500px;
+    margin: 0 auto;
+}
+.neu_product_title {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 35px;
+    font-weight: 500;
+}
+/* карточка товара*/
+.product_main_page {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 500px;
+    justify-content: center;
+}
+
+.product_card {
+    flex-basis: 252px;
+    border: 1px solid #EFEFEF;
+    padding: 40px 50px;
+}
+
+.product_card_title a {
+    font-weight: 500;
+    font-size: 20px;
+    color: #139049;
+    display: block;
+    text-decoration: none;
+    margin-top: 22px;
+    max-height: 20px;
+}
+.product-info {
+    font-size: 15px;
+    color: black;
+    margin-top: 50px;
+    
+}
+.price {
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 25px;
+}
+/* колонки информации о магазине*/
+.info_block {
+    display: flex;
+    
+    justify-content: center;
+}
+.posts:nth-child(1) {
+    width: 399px;
+    margin-right: 54px;
+}
+.post_title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 60px;
+    max-height: 30px;
+    margin-top: 30px;
+    
+}
+.post_content {
+    line-height: 25px;
+    font-size: 15px;
+}
+@media (max-width: 1240px) {
+    /* показываем кнопку для переключения верхней навигации */
+    .nav-toggle {
+        display: block;
+        padding-left: 30px;
+        margin: auto;
+        position: relative;
+        right: 50px;
+    }
+    header {
+        padding: 0;
+    }
+    .mobile_card {
+        display: block;
+    }
+    .korzina_mobile {
+        display: block;
+        background-image: url(img/basket.png);
+        background-repeat: no-repeat;
+        height: 22px;
+        width: 25px;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+    }
+    .mobile_login {
+        background: url(img/Combined\ Shape.png) no-repeat center center;
+        display: block;
+        width: 24px;
+        height: 22px;
+        position: absolute;
+        top: 19px;
+        right: 10px;
+    }
+    .nav-toggle p {
+        display: inline-block;
+        margin-left: 27px;
+        text-align: center; 
+        font-size: 18px;
+        position: relative;
+        top: -9px;
+    }
+    .akcy, .kontat_info_top, .post_social, .korzina li, .korzina-image, .logo  {
+        display: none;
+    }
+    .kontakt_info {
+        margin: 10px auto;
+    }
+  
+    .logo_mobil {
+        display: block;
+        float: left;
+    }
+   
+    /* скрываем верхнее меню, отменяем обтекание, позиционируем его, сместив на высоту шапки сайта */ 
+    #menu {
+        display: none;
+        background:#139049;
+        float: none;
+        position: absolute;
+        overflow: hidden;
+        top: 63px;
+        right: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        z-index: 3;
+    }
+     /* делаем элементы списка блочными, чтобы они располагались друг под другом */
+     #menu li {
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #EBEBE3;
+        margin-right: 0px;
+    }
+   
+}
+@media (max-width: 1426px) {
+
+    #menu, .korzina a {
+        font-size: 10px;
+    }
+    .kontat_info_top {
+        font-size: 11px;
+    }
+}
+@media (max-width: 375px) {
+    .neu_product_title {
+        font-size: 21px;
+    }
+}
+@media (max-width: 1024px) {
+    .info_block {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .posts {
+        width: 100% !important;
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin: 22px 0;
+    }
+}
